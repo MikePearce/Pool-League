@@ -1,0 +1,1421 @@
+DEPRECATION WARNING: config.action_view.debug_rjs will be removed in 3.1, from 3.1 onwards you will need to install prototype-rails to continue to use RJS templates . (called from /usr/local/lib/ruby/gems/1.8/gems/railties-3.0.9/lib/rails/engine.rb:192)
+
+
+Started GET "/" for 127.0.0.1 at Wed Aug 10 14:58:27 +0100 2011
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 12ms (Views: 11.7ms | ActiveRecord: 0.0ms)
+DEPRECATION WARNING: config.action_view.debug_rjs will be removed in 3.1, from 3.1 onwards you will need to install prototype-rails to continue to use RJS templates . (called from /usr/local/lib/ruby/gems/1.8/gems/railties-3.0.9/lib/rails/engine.rb:192)
+
+
+Started GET "/" for 127.0.0.1 at Wed Aug 10 14:58:55 +0100 2011
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 14ms (Views: 13.3ms | ActiveRecord: 0.0ms)
+DEPRECATION WARNING: config.action_view.debug_rjs will be removed in 3.1, from 3.1 onwards you will need to install prototype-rails to continue to use RJS templates . (called from /usr/local/lib/ruby/gems/1.8/gems/railties-3.0.9/lib/rails/engine.rb:192)
+
+
+Started GET "/" for 127.0.0.1 at Wed Aug 10 15:00:45 +0100 2011
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 13ms (Views: 12.1ms | ActiveRecord: 0.0ms)
+DEPRECATION WARNING: config.action_view.debug_rjs will be removed in 3.1, from 3.1 onwards you will need to install prototype-rails to continue to use RJS templates . (called from /usr/local/lib/ruby/gems/1.8/gems/railties-3.0.9/lib/rails/engine.rb:192)
+
+
+Started GET "/" for 127.0.0.1 at Wed Aug 10 16:06:46 +0100 2011
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 37ms (Views: 36.7ms | ActiveRecord: 0.0ms)
+  [1m[36mSQL (0.4ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (51.9ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_list("schema_migrations")
+  [1m[36mSQL (2.8ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations"
+Migrating to CreateUsers (20110810150733)
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to CreateUsers (20110810150733)
+  [1m[35mSQL (0.1ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (0.5ms)[0m  [1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "email" varchar(255), "hashed_password" varchar(255), "salt" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20110810150733')
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations"
+  [1m[36mSQL (0.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_list("users")
+
+
+Started GET "/" for 127.0.0.1 at Wed Aug 10 16:14:26 +0100 2011
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 12ms (Views: 10.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for 127.0.0.1 at Wed Aug 10 16:14:28 +0100 2011
+  Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users"[0m
+Rendered users/index.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 134ms (Views: 10.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at Wed Aug 10 16:14:31 +0100 2011
+  Processing by UsersController#new as HTML
+Rendered users/_form.html.erb (112.0ms)
+Rendered users/new.html.erb within layouts/application (114.5ms)
+Completed 500 Internal Server Error in 129ms
+
+ActionView::Template::Error (undefined method `password' for #<User:0x1052fe120>):
+    21:   </div>
+    22:   <div class="field">
+    23:     <%= f.label :password %><br />
+    24:     <%= f.text_field :password %>
+    25:   </div>
+    26:   <div class="actions">
+    27:     <%= f.submit %>
+  app/views/users/_form.html.erb:24:in `_app_views_users__form_html_erb__1467775940_2190959620_903870'
+  app/views/users/_form.html.erb:1:in `_app_views_users__form_html_erb__1467775940_2190959620_903870'
+  app/views/users/new.html.erb:3:in `_app_views_users_new_html_erb__696680486_2190969480_0'
+  app/controllers/users_controller.rb:29:in `new'
+
+Rendered /Users/mikeypearce/.gem/ruby/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.1ms)
+Rendered /Users/mikeypearce/.gem/ruby/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (9.1ms)
+Rendered /Users/mikeypearce/.gem/ruby/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (94.9ms)
+  [1m[36mSQL (0.6ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mPRAGMA index_list("users")[0m
+  [1m[36mSQL (0.6ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to CreateUsers (20110810151659)
+  [1m[35mSQL (0.1ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (0.5ms)[0m  [1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "email" varchar(255), "password_hash" varchar(255), "password_salt" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20110810151659')
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations"
+  [1m[36mSQL (0.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_list("users")
+
+
+Started GET "/users/new" for 127.0.0.1 at Wed Aug 10 16:17:11 +0100 2011
+  Processing by UsersController#new as HTML
+Rendered users/_form.html.erb (18.0ms)
+Rendered users/new.html.erb within layouts/application (24.7ms)
+Completed 200 OK in 40ms (Views: 32.7ms | ActiveRecord: 0.0ms)
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+  [1m[35mSQL (0.1ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations"
+  [1m[36mSQL (0.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_list("users")
+  [1m[36mSQL (0.6ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.5ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+  [1m[36mSQL (0.6ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT version FROM schema_migrations
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.3ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+  [1m[35mSQL (0.3ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations"
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_list("users")
+  [1m[36mSQL (0.6ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[36mSQL (0.6ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT version FROM schema_migrations
+  [1m[36mSQL (0.6ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to CreateUsers (20110810152234)
+  [1m[35mSQL (0.1ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (0.8ms)[0m  [1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "email" varchar(255), "password_hash" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20110810152234')
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations"
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_list("users")
+
+
+Started GET "/users/new" for 127.0.0.1 at Wed Aug 10 16:26:00 +0100 2011
+  Processing by UsersController#new as HTML
+Rendered users/_form.html.erb (14.4ms)
+Rendered users/new.html.erb within layouts/application (20.2ms)
+Completed 200 OK in 39ms (Views: 28.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at Wed Aug 10 16:26:11 +0100 2011
+  Processing by UsersController#create as HTML
+  Parameters: {"commit"=>"Create User", "authenticity_token"=>"1cUoC751UvdItRDMg7kXhpcTpbpBCdVRQK6RpKSb6/s=", "utf8"=>"✓", "user"=>{"name"=>"Mike Pearce", "password_hash"=>"[FILTERED]", "email"=>"mike@mikepearce.net"}}
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mAREL (0.6ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "name", "updated_at", "password_hash") VALUES ('2011-08-10 15:26:11.203434', 'mike@mikepearce.net', 'Mike Pearce', '2011-08-10 15:26:11.203434', 'munk3h')[0m
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 121ms
+
+
+Started GET "/users/1" for 127.0.0.1 at Wed Aug 10 16:26:11 +0100 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Rendered users/show.html.erb within layouts/application (14.9ms)
+Completed 200 OK in 34ms (Views: 22.3ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/users" for 127.0.0.1 at Wed Aug 10 16:26:13 +0100 2011
+  Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users"[0m
+Rendered users/index.html.erb within layouts/application (15.3ms)
+Completed 200 OK in 31ms (Views: 21.8ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/users/1" for 127.0.0.1 at Wed Aug 10 16:26:17 +0100 2011
+  Processing by UsersController#destroy as HTML
+  Parameters: {"authenticity_token"=>"1cUoC751UvdItRDMg7kXhpcTpbpBCdVRQK6RpKSb6/s=", "id"=>"1"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mAREL (0.4ms)[0m  [1mDELETE FROM "users" WHERE "users"."id" = 1[0m
+Redirected to http://localhost:3000/users
+Completed 302 Found in 70ms
+
+
+Started GET "/users" for 127.0.0.1 at Wed Aug 10 16:26:17 +0100 2011
+  Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users"
+Rendered users/index.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 18ms (Views: 10.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/users" for 127.0.0.1 at Wed Aug 10 16:50:28 +0100 2011
+  Processing by UsersController#index as HTML
+Completed 500 Internal Server Error in 9ms
+
+ArgumentError (wrong number of arguments (2 for 1)):
+  app/controllers/users_controller.rb:5:in `index'
+
+Rendered /Users/mikeypearce/.gem/ruby/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.2ms)
+Rendered /Users/mikeypearce/.gem/ruby/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (11.1ms)
+Rendered /Users/mikeypearce/.gem/ruby/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (19.4ms)
+
+
+Started GET "/users" for 127.0.0.1 at Wed Aug 10 16:50:41 +0100 2011
+  Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT name, email FROM "users"[0m
+Rendered users/index.html.erb within layouts/application (6.3ms)
+Completed 200 OK in 25ms (Views: 14.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at Wed Aug 10 16:50:47 +0100 2011
+  Processing by UsersController#new as HTML
+Rendered users/_form.html.erb (15.3ms)
+Rendered users/new.html.erb within layouts/application (22.0ms)
+Completed 200 OK in 40ms (Views: 29.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at Wed Aug 10 16:51:05 +0100 2011
+  Processing by UsersController#new as HTML
+Rendered users/_form.html.erb (17.0ms)
+Rendered users/new.html.erb within layouts/application (23.2ms)
+Completed 200 OK in 40ms (Views: 29.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at Wed Aug 10 16:51:16 +0100 2011
+  Processing by UsersController#create as HTML
+  Parameters: {"commit"=>"Create User", "authenticity_token"=>"1cUoC751UvdItRDMg7kXhpcTpbpBCdVRQK6RpKSb6/s=", "utf8"=>"✓", "user"=>{"name"=>"Mike Pearce", "password_hash"=>"[FILTERED]", "email"=>"mike@mikepearce.net"}}
+Completed 500 Internal Server Error in 97ms
+
+NoMethodError (undefined method `password' for #<User:0x1054dce88>):
+  app/controllers/users_controller.rb:46:in `create'
+  app/controllers/users_controller.rb:45:in `create'
+
+Rendered /Users/mikeypearce/.gem/ruby/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.0ms)
+Rendered /Users/mikeypearce/.gem/ruby/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (18.5ms)
+Rendered /Users/mikeypearce/.gem/ruby/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (27.5ms)
+
+
+Started POST "/users" for 127.0.0.1 at Wed Aug 10 16:52:08 +0100 2011
+  Processing by UsersController#create as HTML
+  Parameters: {"commit"=>"Create User", "authenticity_token"=>"1cUoC751UvdItRDMg7kXhpcTpbpBCdVRQK6RpKSb6/s=", "utf8"=>"✓", "user"=>{"name"=>"Mike Pearce", "password_hash"=>"[FILTERED]", "email"=>"mike@mikepearce.net"}}
+  [1m[35mAREL (0.7ms)[0m  INSERT INTO "users" ("updated_at", "email", "name", "created_at", "password_hash") VALUES ('2011-08-10 15:52:08.644543', 'mike@mikepearce.net', 'Mike Pearce', '2011-08-10 15:52:08.644543', 'munk3h')
+Redirected to http://localhost:3000/users/2
+Completed 302 Found in 78ms
+
+
+Started GET "/users/2" for 127.0.0.1 at Wed Aug 10 16:52:08 +0100 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+Rendered users/show.html.erb within layouts/application (13.3ms)
+Completed 200 OK in 33ms (Views: 20.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/users/2" for 127.0.0.1 at Wed Aug 10 16:52:21 +0100 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+Rendered users/show.html.erb within layouts/application (11.4ms)
+Completed 200 OK in 30ms (Views: 17.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users" for 127.0.0.1 at Wed Aug 10 16:52:28 +0100 2011
+  Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT name, email FROM "users"[0m
+Rendered users/index.html.erb within layouts/application (8.8ms)
+Completed 500 Internal Server Error in 26ms
+
+ActionView::Template::Error (missing attribute: password_hash):
+    14:   <tr>
+    15:     <td><%= user.name %></td>
+    16:     <td><%= user.email %></td>
+    17:     <td><%= user.password_hash %></td>
+    18:     <td><%= link_to 'Show', user %></td>
+    19:     <td><%= link_to 'Edit', edit_user_path(user) %></td>
+    20:     <td><%= link_to 'Destroy', user, :confirm => 'Are you sure?', :method => :delete %></td>
+  app/views/users/index.html.erb:17:in `_app_views_users_index_html_erb__188200529_2190905320_0'
+  app/views/users/index.html.erb:13:in `_app_views_users_index_html_erb__188200529_2190905320_0'
+  app/controllers/users_controller.rb:7:in `index'
+
+Rendered /Users/mikeypearce/.gem/ruby/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.9ms)
+Rendered /Users/mikeypearce/.gem/ruby/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (9.0ms)
+Rendered /Users/mikeypearce/.gem/ruby/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (17.6ms)
+
+
+Started GET "/users" for 127.0.0.1 at Wed Aug 10 16:52:57 +0100 2011
+  Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT name, email FROM "users"
+Rendered users/index.html.erb within layouts/application (12.4ms)
+Completed 500 Internal Server Error in 30ms
+
+ActionView::Template::Error (No route matches {:action=>"show", :id=>#<User name: "Mike Pearce", email: "mike@mikepearce.net">, :controller=>"users"}):
+    13:   <tr>
+    14:     <td><%= user.name %></td>
+    15:     <td><%= user.email %></td>
+    16:     <td><%= link_to 'Show', user %></td>
+    17:     <td><%= link_to 'Edit', edit_user_path(user) %></td>
+    18:     <td><%= link_to 'Destroy', user, :confirm => 'Are you sure?', :method => :delete %></td>
+    19:   </tr>
+  app/views/users/index.html.erb:16:in `_app_views_users_index_html_erb__188200529_2191838400_0'
+  app/views/users/index.html.erb:12:in `_app_views_users_index_html_erb__188200529_2191838400_0'
+  app/controllers/users_controller.rb:7:in `index'
+
+Rendered /Users/mikeypearce/.gem/ruby/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.1ms)
+Rendered /Users/mikeypearce/.gem/ruby/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (8.9ms)
+Rendered /Users/mikeypearce/.gem/ruby/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (17.8ms)
+
+
+Started GET "/" for 127.0.0.1 at Wed Aug 10 16:53:12 +0100 2011
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 12ms (Views: 11.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users" for 127.0.0.1 at Wed Aug 10 16:53:14 +0100 2011
+  Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT name, email FROM "users"[0m
+Rendered users/index.html.erb within layouts/application (10.5ms)
+Completed 500 Internal Server Error in 27ms
+
+ActionView::Template::Error (No route matches {:action=>"show", :id=>#<User name: "Mike Pearce", email: "mike@mikepearce.net">, :controller=>"users"}):
+    13:   <tr>
+    14:     <td><%= user.name %></td>
+    15:     <td><%= user.email %></td>
+    16:     <td><%= link_to 'Show', user %></td>
+    17:     <td><%= link_to 'Edit', edit_user_path(user) %></td>
+    18:     <td><%= link_to 'Destroy', user, :confirm => 'Are you sure?', :method => :delete %></td>
+    19:   </tr>
+  app/views/users/index.html.erb:16:in `_app_views_users_index_html_erb__188200529_2190325140_0'
+  app/views/users/index.html.erb:12:in `_app_views_users_index_html_erb__188200529_2190325140_0'
+  app/controllers/users_controller.rb:7:in `index'
+
+Rendered /Users/mikeypearce/.gem/ruby/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.0ms)
+Rendered /Users/mikeypearce/.gem/ruby/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (8.9ms)
+Rendered /Users/mikeypearce/.gem/ruby/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (17.7ms)
+
+
+Started GET "/users" for 127.0.0.1 at Wed Aug 10 16:54:24 +0100 2011
+  Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT id, name, email FROM "users"
+Rendered users/index.html.erb within layouts/application (15.0ms)
+Completed 200 OK in 31ms (Views: 20.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/2" for 127.0.0.1 at Wed Aug 10 16:55:08 +0100 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+Rendered users/show.html.erb within layouts/application (12.0ms)
+Completed 200 OK in 32ms (Views: 18.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users" for 127.0.0.1 at Wed Aug 10 16:55:10 +0100 2011
+  Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.5ms)[0m  SELECT id, name, email FROM "users"
+Rendered users/index.html.erb within layouts/application (18.1ms)
+Completed 200 OK in 34ms (Views: 23.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users" for 127.0.0.1 at Wed Aug 10 17:01:54 +0100 2011
+  Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT id, name, email FROM "users"[0m
+Rendered users/index.html.erb within layouts/application (25.4ms)
+Completed 500 Internal Server Error in 119ms
+
+ActionView::Template::Error (undefined local variable or method `games_path' for #<#<Class:0x1054eb8c0>:0x1054e9c50>):
+    11:         <ul>
+    12:             <li><a href="/">Home</a></li>
+    13:             <li><%= link_to "Players", users_path %></li>
+    14:             <li><%= link_to "Games", games_path %></li>
+    15:             <li><%= link_to "Your Account", account_path %>
+    16:         </ul>
+    17:     </div>
+  app/views/layouts/application.html.erb:14:in `_app_views_layouts_application_html_erb__1724625684_2191985560_0'
+  app/controllers/users_controller.rb:7:in `index'
+
+Rendered /Users/mikeypearce/.gem/ruby/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.0ms)
+Rendered /Users/mikeypearce/.gem/ruby/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (9.6ms)
+Rendered /Users/mikeypearce/.gem/ruby/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (18.9ms)
+  [1m[36mSQL (0.6ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to CreateUsers (20110810152234)
+Migrating to CreateGames (20110810160243)
+  [1m[35mSQL (0.1ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (0.6ms)[0m  [1mCREATE TABLE "games" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20110810160243')
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations"
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_list("games")
+  [1m[36mSQL (0.1ms)[0m  [1mPRAGMA index_list("users")[0m
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to CreateUsers (20110810152234)
+Migrating to CreateGames (20110810161450)
+  [1m[35mSQL (0.2ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (0.2ms)[0m  [1mCREATE TABLE "games" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "played" boolean, "seven_ball" boolean, "winner" integer, "player_one" integer, "player_two" integer, "played_date" datetime, "created_at" datetime, "updated_at" datetime) [0m
+SQLite3::SQLException: table "games" already exists: CREATE TABLE "games" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "played" boolean, "seven_ball" boolean, "winner" integer, "player_one" integer, "player_two" integer, "played_date" datetime, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.6ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to CreateUsers (20110810152234)
+Migrating to CreateGames (20110810161450)
+  [1m[35mSQL (0.1ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (0.6ms)[0m  [1mCREATE TABLE "games" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "played" boolean, "seven_ball" boolean, "winner" integer, "player_one" integer, "player_two" integer, "played_date" datetime, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20110810161450')
+  [1m[36mSQL (0.4ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations"
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_list("games")
+  [1m[36mSQL (0.1ms)[0m  [1mPRAGMA index_list("users")[0m
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to CreateUsers (20110810152234)
+Migrating to CreateGames (20110810161450)
+Migrating to CreateLeagues (20110810161833)
+  [1m[35mSQL (0.1ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (1.0ms)[0m  [1mCREATE TABLE "leagues" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "open" boolean, "started" date, "finished" date, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20110810161833')
+  [1m[36mSQL (0.7ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.4ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations"
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_list("games")
+  [1m[36mSQL (0.1ms)[0m  [1mPRAGMA index_list("leagues")[0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_list("users")
+  [1m[36mSQL (1.0ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.3ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to CreateUsers (20110810152234)
+Migrating to CreateLeagues (20110810161833)
+  [1m[35mSQL (0.1ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations"
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_list("games")
+  [1m[36mSQL (0.1ms)[0m  [1mPRAGMA index_list("leagues")[0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_list("users")
+  [1m[36mSQL (0.7ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.4ms)[0m  SELECT version FROM schema_migrations
+  [1m[36mSQL (0.6ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to CreateUsers (20110810152234)
+Migrating to CreateLeagues (20110810161833)
+Migrating to CreateGames (20110810162152)
+  [1m[35mSQL (0.1ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (0.2ms)[0m  [1mCREATE TABLE "games" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "played" boolean, "seven_ball" boolean, "winner" integer, "player_one" integer, "player_two" integer, "played_date" datetime, "created_at" datetime, "updated_at" datetime) [0m
+SQLite3::SQLException: table "games" already exists: CREATE TABLE "games" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "played" boolean, "seven_ball" boolean, "winner" integer, "player_one" integer, "player_two" integer, "played_date" datetime, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.7ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.4ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to CreateUsers (20110810152234)
+Migrating to CreateLeagues (20110810161833)
+Migrating to CreateGames (20110810162152)
+  [1m[35mSQL (0.2ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (0.6ms)[0m  [1mCREATE TABLE "games" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "played" boolean, "seven_ball" boolean, "winner" integer, "player_one" integer, "player_two" integer, "played_date" datetime, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20110810162152')
+  [1m[36mSQL (0.4ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.5ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations"
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_list("games")
+  [1m[36mSQL (0.1ms)[0m  [1mPRAGMA index_list("leagues")[0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_list("users")
+
+
+Started GET "/users" for 127.0.0.1 at Wed Aug 10 17:25:58 +0100 2011
+  Processing by UsersController#index as HTML
+  [1m[35mSQL (0.5ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+Completed 500 Internal Server Error in 122ms
+
+TypeError (Games(id: integer, played: boolean, seven_ball: boolean, winner: integer, player_one: integer, player_two: integer, played_date: datetime, created_at: datetime, updated_at: datetime) is not a symbol):
+  app/models/user.rb:4
+  app/controllers/users_controller.rb:5:in `index'
+
+Rendered /Users/mikeypearce/.gem/ruby/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.4ms)
+Rendered /Users/mikeypearce/.gem/ruby/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (8.0ms)
+Rendered /Users/mikeypearce/.gem/ruby/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (16.5ms)
+
+
+Started GET "/users" for 127.0.0.1 at Wed Aug 10 17:36:00 +0100 2011
+  Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT id, name, email FROM "users"[0m
+Rendered users/index.html.erb within layouts/application (25.5ms)
+Completed 500 Internal Server Error in 124ms
+
+ActionView::Template::Error (undefined local variable or method `games_path' for #<#<Class:0x10549f1f0>:0x105499818>):
+    11:         <ul>
+    12:             <li><a href="/">Home</a></li>
+    13:             <li><%= link_to "Players", users_path %></li>
+    14:             <li><%= link_to "Games", games_path %></li>
+    15:             <li><%= link_to "Your Account", account_path %>
+    16:         </ul>
+    17:     </div>
+  app/views/layouts/application.html.erb:14:in `_app_views_layouts_application_html_erb__1724625684_2191827940_0'
+  app/controllers/users_controller.rb:7:in `index'
+
+Rendered /Users/mikeypearce/.gem/ruby/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.9ms)
+Rendered /Users/mikeypearce/.gem/ruby/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (10.1ms)
+Rendered /Users/mikeypearce/.gem/ruby/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (18.7ms)
+
+
+Started GET "/users" for 127.0.0.1 at Wed Aug 10 17:36:24 +0100 2011
+  Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT id, name, email FROM "users"
+Rendered users/index.html.erb within layouts/application (15.1ms)
+Completed 200 OK in 35ms (Views: 20.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/users" for 127.0.0.1 at Wed Aug 10 17:36:35 +0100 2011
+  Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT id, name, email FROM "users"[0m
+Rendered users/index.html.erb within layouts/application (30.0ms)
+Completed 500 Internal Server Error in 52ms
+
+ActionView::Template::Error (undefined local variable or method `account_path' for #<#<Class:0x1053eec88>:0x1053eced8>):
+    12:             <li><a href="/">Home</a></li>
+    13:             <li><%= link_to "Players", users_path %></li>
+    14: 
+    15:             <li><%= link_to "Your Account", account_path %>
+    16:         </ul>
+    17:     </div>
+    18: <%= yield %>
+  app/views/layouts/application.html.erb:15:in `_app_views_layouts_application_html_erb__1724625684_2191473620_0'
+  app/controllers/users_controller.rb:7:in `index'
+
+Rendered /Users/mikeypearce/.gem/ruby/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.7ms)
+Rendered /Users/mikeypearce/.gem/ruby/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (9.3ms)
+Rendered /Users/mikeypearce/.gem/ruby/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (17.4ms)
+
+
+Started GET "/users" for 127.0.0.1 at Wed Aug 10 17:37:22 +0100 2011
+  Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT id, name, email FROM "users"
+Rendered users/index.html.erb within layouts/application (104.6ms)
+Completed 500 Internal Server Error in 127ms
+
+ActionView::Template::Error (undefined local variable or method `games_path' for #<#<Class:0x10514a248>:0x105148588>):
+    11:         <ul>
+    12:             <li><a href="/">Home</a></li>
+    13:             <li><%= link_to "Players", users_path %></li>
+    14:             <li><%= link_to "Games", games_path %></li>
+    15:             <li><%= link_to "Your Account", account_path %>
+    16:         </ul>
+    17:     </div>
+  app/views/layouts/application.html.erb:14:in `_app_views_layouts_application_html_erb__1724625684_2190093040_0'
+  app/controllers/users_controller.rb:7:in `index'
+
+Rendered /Users/mikeypearce/.gem/ruby/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.6ms)
+Rendered /Users/mikeypearce/.gem/ruby/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (10.6ms)
+Rendered /Users/mikeypearce/.gem/ruby/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (21.6ms)
+
+
+Started GET "/users" for 127.0.0.1 at Wed Aug 10 17:38:00 +0100 2011
+  Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT id, name, email FROM "users"[0m
+Rendered users/index.html.erb within layouts/application (32.6ms)
+Completed 500 Internal Server Error in 56ms
+
+ActionView::Template::Error (undefined local variable or method `games_path' for #<#<Class:0x1052af110>:0x1052acfc8>):
+    11:         <ul>
+    12:             <li><a href="/">Home</a></li>
+    13:             <li><%= link_to "Players", users_path %></li>
+    14:             <li><%= link_to "Games", games_path %></li>
+    15:             <li><%= link_to "Your Account", account_path %>
+    16:         </ul>
+    17:     </div>
+  app/views/layouts/application.html.erb:14:in `_app_views_layouts_application_html_erb__1724625684_2190816160_0'
+  app/controllers/users_controller.rb:7:in `index'
+
+Rendered /Users/mikeypearce/.gem/ruby/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.6ms)
+Rendered /Users/mikeypearce/.gem/ruby/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (9.4ms)
+Rendered /Users/mikeypearce/.gem/ruby/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (19.3ms)
+
+
+Started GET "/users" for 127.0.0.1 at Wed Aug 10 17:39:20 +0100 2011
+  Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.5ms)[0m  SELECT id, name, email FROM "users"
+Rendered users/index.html.erb within layouts/application (17.5ms)
+Completed 500 Internal Server Error in 41ms
+
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"account"}):
+    12:             <li><a href="/">Home</a></li>
+    13:             <li><%= link_to "Players", users_path %></li>
+    14:             <li><%= link_to "Games", games_path %></li>
+    15:             <li><%= link_to "Your Account", account_path %>
+    16:         </ul>
+    17:     </div>
+    18: <%= yield %>
+  app/views/layouts/application.html.erb:15:in `_app_views_layouts_application_html_erb__1724625684_2190997500_0'
+  app/controllers/users_controller.rb:7:in `index'
+
+Rendered /Users/mikeypearce/.gem/ruby/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.9ms)
+Rendered /Users/mikeypearce/.gem/ruby/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (9.2ms)
+Rendered /Users/mikeypearce/.gem/ruby/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (17.5ms)
+
+
+Started GET "/users" for 127.0.0.1 at Wed Aug 10 17:39:59 +0100 2011
+  Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT id, name, email FROM "users"[0m
+Rendered users/index.html.erb within layouts/application (18.9ms)
+Completed 200 OK in 118ms (Views: 24.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/accounts" for 127.0.0.1 at Wed Aug 10 17:40:02 +0100 2011
+
+ActionController::RoutingError (uninitialized constant AccountsController):
+  
+
+Rendered /Users/mikeypearce/.gem/ruby/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.4ms)
+
+
+Started GET "/games" for 127.0.0.1 at Wed Aug 10 17:40:05 +0100 2011
+  Processing by GamesController#index as HTML
+Rendered games/index.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 13ms (Views: 12.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for 127.0.0.1 at Wed Aug 10 20:43:33 +0100 2011
+  Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.5ms)[0m  SELECT id, name, email FROM "users"
+Rendered users/index.html.erb within layouts/application (93.7ms)
+Completed 200 OK in 143ms (Views: 127.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at Wed Aug 10 20:43:35 +0100 2011
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 22ms (Views: 21.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/games" for 127.0.0.1 at Wed Aug 10 20:43:37 +0100 2011
+  Processing by GamesController#index as HTML
+Rendered games/index.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 28ms (Views: 26.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/accounts" for 127.0.0.1 at Wed Aug 10 20:43:38 +0100 2011
+
+ActionController::RoutingError (uninitialized constant AccountsController):
+  
+
+Rendered /Users/mikeypearce/.gem/ruby/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.2ms)
+
+
+Started GET "/accounts" for 127.0.0.1 at Wed Aug 10 20:43:53 +0100 2011
+
+ActionController::RoutingError (uninitialized constant AccountsController):
+  
+
+Rendered /Users/mikeypearce/.gem/ruby/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.2ms)
+
+
+Started GET "/accounts" for 127.0.0.1 at Wed Aug 10 20:44:03 +0100 2011
+
+ActionController::RoutingError (uninitialized constant AccountsController):
+  
+
+Rendered /Users/mikeypearce/.gem/ruby/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.6ms)
+
+
+Started GET "/accounts" for 127.0.0.1 at Wed Aug 10 20:44:14 +0100 2011
+
+ActionController::RoutingError (uninitialized constant AccountsController):
+  
+
+Rendered /Users/mikeypearce/.gem/ruby/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.3ms)
+
+
+Started GET "/accounts" for 127.0.0.1 at Wed Aug 10 20:44:27 +0100 2011
+
+ActionController::RoutingError (No route matches "/accounts"):
+  
+
+Rendered /Users/mikeypearce/.gem/ruby/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.1ms)
+
+
+Started GET "/account" for 127.0.0.1 at Wed Aug 10 20:44:32 +0100 2011
+  Processing by AccountController#index as HTML
+Rendered account/index.html.erb within layouts/application (5.8ms)
+Completed 500 Internal Server Error in 14ms
+
+ActionView::Template::Error (No route matches {:controller=>"accounts"}):
+    12:             <li><a href="/">Home</a></li>
+    13:             <li><%= link_to "Players", users_path %></li>
+    14:             <li><%= link_to "Games", games_path %></li>
+    15:             <li><%= link_to "Your Account", accounts_path %>
+    16:         </ul>
+    17:     </div>
+    18: <%= yield %>
+  app/views/layouts/application.html.erb:15:in `_app_views_layouts_application_html_erb__1724625684_2190688060_0'
+
+Rendered /Users/mikeypearce/.gem/ruby/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.4ms)
+Rendered /Users/mikeypearce/.gem/ruby/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (9.6ms)
+Rendered /Users/mikeypearce/.gem/ruby/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (19.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Wed Aug 10 20:44:51 +0100 2011
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/application (5.6ms)
+Completed 500 Internal Server Error in 12ms
+
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"account"}):
+    12:             <li><a href="/">Home</a></li>
+    13:             <li><%= link_to "Players", users_path %></li>
+    14:             <li><%= link_to "Games", games_path %></li>
+    15:             <li><%= link_to "Your Account", account_path %>
+    16:         </ul>
+    17:     </div>
+    18: <%= yield %>
+  app/views/layouts/application.html.erb:15:in `_app_views_layouts_application_html_erb__1724625684_2189816500_0'
+
+Rendered /Users/mikeypearce/.gem/ruby/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.5ms)
+Rendered /Users/mikeypearce/.gem/ruby/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (9.1ms)
+Rendered /Users/mikeypearce/.gem/ruby/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (19.6ms)
+
+
+Started GET "/" for 127.0.0.1 at Wed Aug 10 20:45:20 +0100 2011
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/application (6.2ms)
+Completed 500 Internal Server Error in 14ms
+
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"account"}):
+    12:             <li><a href="/">Home</a></li>
+    13:             <li><%= link_to "Players", users_path %></li>
+    14:             <li><%= link_to "Games", games_path %></li>
+    15:             <li><%= link_to "Your Account", account_path %>
+    16:         </ul>
+    17:     </div>
+    18: <%= yield %>
+  app/views/layouts/application.html.erb:15:in `_app_views_layouts_application_html_erb__1724625684_2191830760_0'
+
+Rendered /Users/mikeypearce/.gem/ruby/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.8ms)
+Rendered /Users/mikeypearce/.gem/ruby/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (10.6ms)
+Rendered /Users/mikeypearce/.gem/ruby/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (21.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Wed Aug 10 20:48:16 +0100 2011
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/application (5.8ms)
+Completed 500 Internal Server Error in 12ms
+
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"account"}):
+    16:             <li><a href="/">Home</a></li>
+    17:             <li><%= link_to "Players", users_path %></li>
+    18:             <li><%= link_to "Games", games_path %></li>
+    19:             <li><%= link_to "Your Account", account_path %>
+    20:         </ul>
+    21:     </div>
+    22:     
+  app/views/layouts/application.html.erb:19:in `_app_views_layouts_application_html_erb__1724625684_2190796000_0'
+
+Rendered /Users/mikeypearce/.gem/ruby/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.0ms)
+Rendered /Users/mikeypearce/.gem/ruby/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (9.3ms)
+Rendered /Users/mikeypearce/.gem/ruby/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (19.8ms)
+
+
+Started GET "/" for 127.0.0.1 at Wed Aug 10 20:48:36 +0100 2011
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/application (5.5ms)
+Completed 500 Internal Server Error in 12ms
+
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"account"}):
+    16:             <li><a href="/">Home</a></li>
+    17:             <li><%= link_to "Players", users_path %></li>
+    18:             <li><%= link_to "Games", games_path %></li>
+    19:             <li><%= link_to "Your Account", account_path %>
+    20:         </ul>
+    21:     </div>
+    22:     
+  app/views/layouts/application.html.erb:19:in `_app_views_layouts_application_html_erb__1724625684_2189963120_0'
+
+Rendered /Users/mikeypearce/.gem/ruby/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.8ms)
+Rendered /Users/mikeypearce/.gem/ruby/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (8.7ms)
+Rendered /Users/mikeypearce/.gem/ruby/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (16.9ms)
+
+
+Started GET "/" for 127.0.0.1 at Wed Aug 10 20:48:57 +0100 2011
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/application (6.1ms)
+Completed 500 Internal Server Error in 13ms
+
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"account"}):
+    16:             <li><a href="/">Home</a></li>
+    17:             <li><%= link_to "Players", users_path %></li>
+    18:             <li><%= link_to "Games", games_path %></li>
+    19:             <li><%= link_to "Your Account", account_path %>
+    20:         </ul>
+    21:     </div>
+    22:     
+  app/views/layouts/application.html.erb:19:in `_app_views_layouts_application_html_erb__1724625684_2191737440_0'
+
+Rendered /Users/mikeypearce/.gem/ruby/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.9ms)
+Rendered /Users/mikeypearce/.gem/ruby/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (8.8ms)
+Rendered /Users/mikeypearce/.gem/ruby/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (17.4ms)
+
+
+Started GET "/" for 127.0.0.1 at Wed Aug 10 20:49:19 +0100 2011
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/application (6.2ms)
+Completed 500 Internal Server Error in 14ms
+
+ActionView::Template::Error (No route matches {:controller=>"accounts"}):
+    16:             <li><a href="/">Home</a></li>
+    17:             <li><%= link_to "Players", users_path %></li>
+    18:             <li><%= link_to "Games", games_path %></li>
+    19:             <li><%= link_to "Your Account", accounts_path %>
+    20:         </ul>
+    21:     </div>
+    22:     
+  app/views/layouts/application.html.erb:19:in `_app_views_layouts_application_html_erb__1724625684_2190693600_0'
+
+Rendered /Users/mikeypearce/.gem/ruby/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.0ms)
+Rendered /Users/mikeypearce/.gem/ruby/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (9.8ms)
+Rendered /Users/mikeypearce/.gem/ruby/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (18.3ms)
+
+
+Started GET "/" for 127.0.0.1 at Wed Aug 10 20:49:25 +0100 2011
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/application (6.3ms)
+Completed 500 Internal Server Error in 14ms
+
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"account"}):
+    16:             <li><a href="/">Home</a></li>
+    17:             <li><%= link_to "Players", users_path %></li>
+    18:             <li><%= link_to "Games", games_path %></li>
+    19:             <li><%= link_to "Your Account", account_path %>
+    20:         </ul>
+    21:     </div>
+    22:     
+  app/views/layouts/application.html.erb:19:in `_app_views_layouts_application_html_erb__1724625684_2189861080_0'
+
+Rendered /Users/mikeypearce/.gem/ruby/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.9ms)
+Rendered /Users/mikeypearce/.gem/ruby/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (10.3ms)
+Rendered /Users/mikeypearce/.gem/ruby/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (19.6ms)
+
+
+Started GET "/" for 127.0.0.1 at Wed Aug 10 20:49:35 +0100 2011
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/application (14.2ms)
+Completed 500 Internal Server Error in 21ms
+
+ActionView::Template::Error (undefined local variable or method `account_path_index' for #<#<Class:0x105448378>:0x105446438>):
+    16:             <li><a href="/">Home</a></li>
+    17:             <li><%= link_to "Players", users_path %></li>
+    18:             <li><%= link_to "Games", games_path %></li>
+    19:             <li><%= link_to "Your Account", account_path_index %>
+    20:         </ul>
+    21:     </div>
+    22:     
+  app/views/layouts/application.html.erb:19:in `_app_views_layouts_application_html_erb__1724625684_2191660800_0'
+
+Rendered /Users/mikeypearce/.gem/ruby/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.0ms)
+Rendered /Users/mikeypearce/.gem/ruby/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (10.4ms)
+Rendered /Users/mikeypearce/.gem/ruby/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (19.8ms)
+
+
+Started GET "/" for 127.0.0.1 at Wed Aug 10 20:49:44 +0100 2011
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/application (5.2ms)
+Completed 500 Internal Server Error in 11ms
+
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"account"}):
+    16:             <li><a href="/">Home</a></li>
+    17:             <li><%= link_to "Players", users_path %></li>
+    18:             <li><%= link_to "Games", games_path %></li>
+    19:             <li><%= link_to "Your Account", account_path %>
+    20:         </ul>
+    21:     </div>
+    22:     
+  app/views/layouts/application.html.erb:19:in `_app_views_layouts_application_html_erb__1724625684_2190575420_0'
+
+Rendered /Users/mikeypearce/.gem/ruby/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.9ms)
+Rendered /Users/mikeypearce/.gem/ruby/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (9.6ms)
+Rendered /Users/mikeypearce/.gem/ruby/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (18.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Wed Aug 10 20:56:14 +0100 2011
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/application (6.0ms)
+Completed 500 Internal Server Error in 14ms
+
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"account"}):
+    16:             <li><a href="/">Home</a></li>
+    17:             <li><%= link_to "Players", users_path %></li>
+    18:             <li><%= link_to "Games", games_path %></li>
+    19:             <li><%= link_to "Your Account", account_path %>
+    20:         </ul>
+    21:     </div>
+    22:     
+  app/views/layouts/application.html.erb:19:in `_app_views_layouts_application_html_erb__1724625684_2189784860_0'
+
+Rendered /Users/mikeypearce/.gem/ruby/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (70.6ms)
+Rendered /Users/mikeypearce/.gem/ruby/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (8.6ms)
+Rendered /Users/mikeypearce/.gem/ruby/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (86.1ms)
+
+
+Started GET "/" for 127.0.0.1 at Wed Aug 10 20:56:54 +0100 2011
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/application (5.2ms)
+Completed 500 Internal Server Error in 12ms
+
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"account"}):
+    16:             <li><a href="/">Home</a></li>
+    17:             <li><%= link_to "Players", users_path %></li>
+    18:             <li><%= link_to "Games", games_path %></li>
+    19:             <li><%= link_to "Your Account", account_path %></li>
+    20:         </ul>
+    21:     </div>
+    22:     
+  app/views/layouts/application.html.erb:19:in `_app_views_layouts_application_html_erb__1724625684_2191389920_0'
+
+Rendered /Users/mikeypearce/.gem/ruby/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.1ms)
+Rendered /Users/mikeypearce/.gem/ruby/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (11.4ms)
+Rendered /Users/mikeypearce/.gem/ruby/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (23.3ms)
+
+
+Started GET "/" for 127.0.0.1 at Wed Aug 10 21:02:59 +0100 2011
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/application (7.9ms)
+Completed 500 Internal Server Error in 50ms
+
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"account"}):
+    16:             <li><a href="/">Home</a></li>
+    17:             <li><%= link_to "Players", users_path %></li>
+    18:             <li><%= link_to "Games", games_path %></li>
+    19:             <li><%= link_to "Your Account", account_path %></li>
+    20:         </ul>
+    21:     </div>
+    22:     
+  app/views/layouts/application.html.erb:19:in `_app_views_layouts_application_html_erb__1724625684_2190467880_0'
+
+Rendered /Users/mikeypearce/.gem/ruby/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.0ms)
+Rendered /Users/mikeypearce/.gem/ruby/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (8.6ms)
+Rendered /Users/mikeypearce/.gem/ruby/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (17.4ms)
+
+
+Started GET "/" for 127.0.0.1 at Wed Aug 10 21:03:00 +0100 2011
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/application (6.0ms)
+Completed 500 Internal Server Error in 13ms
+
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"account"}):
+    16:             <li><a href="/">Home</a></li>
+    17:             <li><%= link_to "Players", users_path %></li>
+    18:             <li><%= link_to "Games", games_path %></li>
+    19:             <li><%= link_to "Your Account", account_path %></li>
+    20:         </ul>
+    21:     </div>
+    22:     
+  app/views/layouts/application.html.erb:19:in `_app_views_layouts_application_html_erb__1724625684_2189692140_0'
+
+Rendered /Users/mikeypearce/.gem/ruby/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.0ms)
+Rendered /Users/mikeypearce/.gem/ruby/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (9.3ms)
+Rendered /Users/mikeypearce/.gem/ruby/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (18.1ms)
+
+
+Started GET "/" for 127.0.0.1 at Wed Aug 10 21:03:16 +0100 2011
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/application (5.9ms)
+Completed 500 Internal Server Error in 13ms
+
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"account"}):
+    16:             <li><a href="/">Home</a></li>
+    17:             <li><%= link_to "Players", users_path %></li>
+    18:             <li><%= link_to "Games", games_path %></li>
+    19:             <li><%= link_to "Your Account", account_path %></li>
+    20:         </ul>
+    21:     </div>
+    22:     
+  app/views/layouts/application.html.erb:19:in `_app_views_layouts_application_html_erb__1724625684_2191320040_0'
+
+Rendered /Users/mikeypearce/.gem/ruby/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.0ms)
+Rendered /Users/mikeypearce/.gem/ruby/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (8.6ms)
+Rendered /Users/mikeypearce/.gem/ruby/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (17.3ms)
+
+
+Started GET "/" for 127.0.0.1 at Wed Aug 10 21:10:00 +0100 2011
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/application (5.9ms)
+Completed 500 Internal Server Error in 25ms
+
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"account"}):
+    16:             <li><a href="/">Home</a></li>
+    17:             <li><%= link_to "Players", users_path %></li>
+    18:             <li><%= link_to "Games", games_path %></li>
+    19:             <li><%= link_to "Your Account", account_path %></li>
+    20:         </ul>
+    21:     </div>
+    22:     
+  app/views/layouts/application.html.erb:19:in `_app_views_layouts_application_html_erb__1724625684_2189604820_0'
+
+Rendered /Users/mikeypearce/.gem/ruby/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.1ms)
+Rendered /Users/mikeypearce/.gem/ruby/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (85.0ms)
+Rendered /Users/mikeypearce/.gem/ruby/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (94.2ms)
+
+
+Started GET "/" for 127.0.0.1 at Wed Aug 10 21:10:28 +0100 2011
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/application (9.8ms)
+Completed 500 Internal Server Error in 21ms
+
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"account"}):
+    16:             <li><a href="/">Home</a></li>
+    17:             <li><%= link_to "Players", users_path %></li>
+    18:             <li><%= link_to "Games", games_path %></li>
+    19:             <li><%= link_to "Your Account", account_path %></li>
+    20:         </ul>
+    21:     </div>
+    22:     
+  app/views/layouts/application.html.erb:19:in `_app_views_layouts_application_html_erb__1724625684_2190655100_0'
+
+Rendered /Users/mikeypearce/.gem/ruby/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.9ms)
+Rendered /Users/mikeypearce/.gem/ruby/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (9.7ms)
+Rendered /Users/mikeypearce/.gem/ruby/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (18.7ms)
+
+
+Started GET "/" for 127.0.0.1 at Wed Aug 10 21:13:56 +0100 2011
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/application (85.9ms)
+Completed 500 Internal Server Error in 93ms
+
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"account"}):
+    16:             <li><a href="/">Home</a></li>
+    17:             <li><%= link_to "Players", users_path %></li>
+    18:             <li><%= link_to "Games", games_path %></li>
+    19:             <li><%= link_to "Your Account", account_path %></li>
+    20:         </ul>
+    21:     </div>
+    22:     
+  app/views/layouts/application.html.erb:19:in `_app_views_layouts_application_html_erb__1724625684_2188989220_0'
+
+Rendered /Users/mikeypearce/.gem/ruby/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.1ms)
+Rendered /Users/mikeypearce/.gem/ruby/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (8.7ms)
+Rendered /Users/mikeypearce/.gem/ruby/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (17.6ms)
+
+
+Started GET "/" for 127.0.0.1 at Wed Aug 10 21:14:36 +0100 2011
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/application (5.8ms)
+Completed 500 Internal Server Error in 12ms
+
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"account"}):
+    16:             <li><a href="/">Home</a></li>
+    17:             <li><%= link_to "Players", users_path %></li>
+    18:             <li><%= link_to "Games", games_path %></li>
+    19:             <li><%= link_to "Your Account", account_path %></li>
+    20:         </ul>
+    21:     </div>
+    22:     
+  app/views/layouts/application.html.erb:19:in `_app_views_layouts_application_html_erb__1724625684_2190183000_0'
+
+Rendered /Users/mikeypearce/.gem/ruby/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.9ms)
+Rendered /Users/mikeypearce/.gem/ruby/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (8.6ms)
+Rendered /Users/mikeypearce/.gem/ruby/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (17.1ms)
+
+
+Started GET "/" for 127.0.0.1 at Wed Aug 10 21:16:00 +0100 2011
+  Processing by HomeController#index as HTML
+ERROR: compiling _app_views_layouts_application_html_erb__1724625684_2189305340_0 RAISED compile error
+/Users/mikeypearce/Sites/poolleague/app/views/layouts/application.html.erb:20: syntax error, unexpected '<', expecting kEND
+        </ul>
+         ^
+/Users/mikeypearce/Sites/poolleague/app/views/layouts/application.html.erb:21: unknown regexp options - dv
+/Users/mikeypearce/Sites/poolleague/app/views/layouts/application.html.erb:25: syntax error, unexpected '<', expecting kEND
+</body>
+ ^
+/Users/mikeypearce/Sites/poolleague/app/views/layouts/application.html.erb:26: unknown regexp options - htl
+/Users/mikeypearce/Sites/poolleague/app/views/layouts/application.html.erb:27: unterminated string meets end of file
+/Users/mikeypearce/Sites/poolleague/app/views/layouts/application.html.erb:27: syntax error, unexpected $end, expecting kEND
+Function body:           def _app_views_layouts_application_html_erb__1724625684_2189305340_0(local_assigns)
+            _old_virtual_path, @_virtual_path = @_virtual_path, "layouts/application";_old_output_buffer = @output_buffer;;@output_buffer = ActionView::OutputBuffer.new;@output_buffer.safe_concat('<!DOCTYPE html>
+<html>
+<head>
+  <title>Pool league</title>
+  ');@output_buffer.append= ( stylesheet_link_tag :all );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('  ');@output_buffer.append= ( javascript_include_tag :defaults );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('  ');@output_buffer.append= ( csrf_meta_tag );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('</head>
+<body>
+    <div id="header">
+        <h1>Mearsk League</h1>
+        <h2>Pool, bitches!</h2>
+    </div>
+    <div id="navigation">
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li>');@output_buffer.append= ( link_to "Players", users_path );@output_buffer.safe_concat('</li>
+            <li>');@output_buffer.append= ( link_to "Games", games_path );@output_buffer.safe_concat('</li>
+            <li>'); #= link_to "Your Account", account_path ;@output_buffer.safe_concat('</li>
+        </ul>
+    </div>
+    
+');@output_buffer.append= ( yield );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('
+</body>
+</html>
+');@output_buffer.to_s
+          ensure
+            @_virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+Backtrace: /Users/mikeypearce/Sites/poolleague/app/views/layouts/application.html.erb:27:in `compile'
+/Users/mikeypearce/.gem/ruby/1.8/gems/actionpack-3.0.9/lib/action_view/template.rb:134:in `render'
+/Users/mikeypearce/.gem/ruby/1.8/gems/activesupport-3.0.9/lib/active_support/notifications.rb:54:in `instrument'
+/Users/mikeypearce/.gem/ruby/1.8/gems/actionpack-3.0.9/lib/action_view/template.rb:127:in `render'
+/Users/mikeypearce/.gem/ruby/1.8/gems/actionpack-3.0.9/lib/action_view/render/layouts.rb:80:in `_render_layout'
+/Users/mikeypearce/.gem/ruby/1.8/gems/actionpack-3.0.9/lib/action_view/render/rendering.rb:62:in `_render_template'
+/Users/mikeypearce/.gem/ruby/1.8/gems/activesupport-3.0.9/lib/active_support/notifications.rb:52:in `instrument'
+/Users/mikeypearce/.gem/ruby/1.8/gems/activesupport-3.0.9/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/Users/mikeypearce/.gem/ruby/1.8/gems/activesupport-3.0.9/lib/active_support/notifications.rb:52:in `instrument'
+/Users/mikeypearce/.gem/ruby/1.8/gems/actionpack-3.0.9/lib/action_view/render/rendering.rb:56:in `_render_template'
+/Users/mikeypearce/.gem/ruby/1.8/gems/actionpack-3.0.9/lib/action_view/render/rendering.rb:26:in `render'
+/Users/mikeypearce/.gem/ruby/1.8/gems/actionpack-3.0.9/lib/abstract_controller/rendering.rb:115:in `_render_template'
+/Users/mikeypearce/.gem/ruby/1.8/gems/actionpack-3.0.9/lib/abstract_controller/rendering.rb:109:in `render_to_body'
+/Users/mikeypearce/.gem/ruby/1.8/gems/actionpack-3.0.9/lib/action_controller/metal/renderers.rb:47:in `render_to_body'
+/Users/mikeypearce/.gem/ruby/1.8/gems/actionpack-3.0.9/lib/action_controller/metal/compatibility.rb:55:in `render_to_body'
+/Users/mikeypearce/.gem/ruby/1.8/gems/actionpack-3.0.9/lib/abstract_controller/rendering.rb:102:in `render_to_string'
+/Users/mikeypearce/.gem/ruby/1.8/gems/actionpack-3.0.9/lib/abstract_controller/rendering.rb:93:in `render'
+/Users/mikeypearce/.gem/ruby/1.8/gems/actionpack-3.0.9/lib/action_controller/metal/rendering.rb:17:in `render'
+/Users/mikeypearce/.gem/ruby/1.8/gems/actionpack-3.0.9/lib/action_controller/metal/instrumentation.rb:40:in `render'
+/Users/mikeypearce/.gem/ruby/1.8/gems/activesupport-3.0.9/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+/usr/local/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/Users/mikeypearce/.gem/ruby/1.8/gems/activesupport-3.0.9/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+/Users/mikeypearce/.gem/ruby/1.8/gems/actionpack-3.0.9/lib/action_controller/metal/instrumentation.rb:40:in `render'
+/Users/mikeypearce/.gem/ruby/1.8/gems/actionpack-3.0.9/lib/action_controller/metal/instrumentation.rb:78:in `cleanup_view_runtime'
+/Users/mikeypearce/.gem/ruby/1.8/gems/activerecord-3.0.9/lib/active_record/railties/controller_runtime.rb:15:in `cleanup_view_runtime'
+/Users/mikeypearce/.gem/ruby/1.8/gems/actionpack-3.0.9/lib/action_controller/metal/instrumentation.rb:39:in `render'
+/Users/mikeypearce/.gem/ruby/1.8/gems/actionpack-3.0.9/lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+/Users/mikeypearce/.gem/ruby/1.8/gems/actionpack-3.0.9/lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+/Users/mikeypearce/.gem/ruby/1.8/gems/actionpack-3.0.9/lib/abstract_controller/base.rb:150:in `process_action'
+/Users/mikeypearce/.gem/ruby/1.8/gems/actionpack-3.0.9/lib/action_controller/metal/rendering.rb:11:in `process_action'
+/Users/mikeypearce/.gem/ruby/1.8/gems/actionpack-3.0.9/lib/abstract_controller/callbacks.rb:18:in `process_action'
+/Users/mikeypearce/.gem/ruby/1.8/gems/activesupport-3.0.9/lib/active_support/callbacks.rb:436:in `_run__738958071__process_action__199225275__callbacks'
+/Users/mikeypearce/.gem/ruby/1.8/gems/activesupport-3.0.9/lib/active_support/callbacks.rb:410:in `send'
+/Users/mikeypearce/.gem/ruby/1.8/gems/activesupport-3.0.9/lib/active_support/callbacks.rb:410:in `_run_process_action_callbacks'
+/Users/mikeypearce/.gem/ruby/1.8/gems/activesupport-3.0.9/lib/active_support/callbacks.rb:94:in `send'
+/Users/mikeypearce/.gem/ruby/1.8/gems/activesupport-3.0.9/lib/active_support/callbacks.rb:94:in `run_callbacks'
+/Users/mikeypearce/.gem/ruby/1.8/gems/actionpack-3.0.9/lib/abstract_controller/callbacks.rb:17:in `process_action'
+/Users/mikeypearce/.gem/ruby/1.8/gems/actionpack-3.0.9/lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+/Users/mikeypearce/.gem/ruby/1.8/gems/activesupport-3.0.9/lib/active_support/notifications.rb:52:in `instrument'
+/Users/mikeypearce/.gem/ruby/1.8/gems/activesupport-3.0.9/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/Users/mikeypearce/.gem/ruby/1.8/gems/activesupport-3.0.9/lib/active_support/notifications.rb:52:in `instrument'
+/Users/mikeypearce/.gem/ruby/1.8/gems/actionpack-3.0.9/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+/Users/mikeypearce/.gem/ruby/1.8/gems/actionpack-3.0.9/lib/action_controller/metal/rescue.rb:17:in `process_action'
+/Users/mikeypearce/.gem/ruby/1.8/gems/actionpack-3.0.9/lib/abstract_controller/base.rb:119:in `process'
+/Users/mikeypearce/.gem/ruby/1.8/gems/actionpack-3.0.9/lib/abstract_controller/rendering.rb:41:in `process'
+/Users/mikeypearce/.gem/ruby/1.8/gems/actionpack-3.0.9/lib/action_controller/metal.rb:138:in `dispatch'
+/Users/mikeypearce/.gem/ruby/1.8/gems/actionpack-3.0.9/lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+/Users/mikeypearce/.gem/ruby/1.8/gems/actionpack-3.0.9/lib/action_controller/metal.rb:178:in `action'
+/Users/mikeypearce/.gem/ruby/1.8/gems/actionpack-3.0.9/lib/action_dispatch/routing/route_set.rb:62:in `call'
+/Users/mikeypearce/.gem/ruby/1.8/gems/actionpack-3.0.9/lib/action_dispatch/routing/route_set.rb:62:in `dispatch'
+/Users/mikeypearce/.gem/ruby/1.8/gems/actionpack-3.0.9/lib/action_dispatch/routing/route_set.rb:27:in `call'
+/Users/mikeypearce/.gem/ruby/1.8/gems/rack-mount-0.6.14/lib/rack/mount/route_set.rb:148:in `call'
+/Users/mikeypearce/.gem/ruby/1.8/gems/rack-mount-0.6.14/lib/rack/mount/code_generation.rb:93:in `recognize'
+/Users/mikeypearce/.gem/ruby/1.8/gems/rack-mount-0.6.14/lib/rack/mount/code_generation.rb:68:in `optimized_each'
+/Users/mikeypearce/.gem/ruby/1.8/gems/rack-mount-0.6.14/lib/rack/mount/code_generation.rb:92:in `recognize'
+/Users/mikeypearce/.gem/ruby/1.8/gems/rack-mount-0.6.14/lib/rack/mount/route_set.rb:139:in `call'
+/Users/mikeypearce/.gem/ruby/1.8/gems/actionpack-3.0.9/lib/action_dispatch/routing/route_set.rb:493:in `call'
+/Users/mikeypearce/.gem/ruby/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+/Users/mikeypearce/.gem/ruby/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/head.rb:14:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/rack-1.2.1/lib/rack/methodoverride.rb:24:in `call'
+/Users/mikeypearce/.gem/ruby/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+/Users/mikeypearce/.gem/ruby/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/flash.rb:182:in `call'
+/Users/mikeypearce/.gem/ruby/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/session/abstract_store.rb:149:in `call'
+/Users/mikeypearce/.gem/ruby/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/cookies.rb:302:in `call'
+/Users/mikeypearce/.gem/ruby/1.8/gems/activerecord-3.0.9/lib/active_record/query_cache.rb:32:in `call'
+/Users/mikeypearce/.gem/ruby/1.8/gems/activerecord-3.0.9/lib/active_record/connection_adapters/abstract/query_cache.rb:28:in `cache'
+/Users/mikeypearce/.gem/ruby/1.8/gems/activerecord-3.0.9/lib/active_record/query_cache.rb:12:in `cache'
+/Users/mikeypearce/.gem/ruby/1.8/gems/activerecord-3.0.9/lib/active_record/query_cache.rb:31:in `call'
+/Users/mikeypearce/.gem/ruby/1.8/gems/activerecord-3.0.9/lib/active_record/connection_adapters/abstract/connection_pool.rb:354:in `call'
+/Users/mikeypearce/.gem/ruby/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/callbacks.rb:46:in `call'
+/Users/mikeypearce/.gem/ruby/1.8/gems/activesupport-3.0.9/lib/active_support/callbacks.rb:416:in `_run_call_callbacks'
+/Users/mikeypearce/.gem/ruby/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/callbacks.rb:44:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/rack-1.2.1/lib/rack/sendfile.rb:107:in `call'
+/Users/mikeypearce/.gem/ruby/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/remote_ip.rb:48:in `call'
+/Users/mikeypearce/.gem/ruby/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/show_exceptions.rb:47:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/railties-3.0.9/lib/rails/rack/logger.rb:13:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/rack-1.2.1/lib/rack/runtime.rb:17:in `call'
+/Users/mikeypearce/.gem/ruby/1.8/gems/activesupport-3.0.9/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/rack-1.2.1/lib/rack/lock.rb:11:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/rack-1.2.1/lib/rack/lock.rb:11:in `synchronize'
+/usr/local/lib/ruby/gems/1.8/gems/rack-1.2.1/lib/rack/lock.rb:11:in `call'
+/Users/mikeypearce/.gem/ruby/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/static.rb:30:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/railties-3.0.9/lib/rails/application.rb:168:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/railties-3.0.9/lib/rails/application.rb:77:in `send'
+/usr/local/lib/ruby/gems/1.8/gems/railties-3.0.9/lib/rails/application.rb:77:in `method_missing'
+/usr/local/lib/ruby/gems/1.8/gems/railties-3.0.9/lib/rails/rack/log_tailer.rb:14:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/rack-1.2.1/lib/rack/content_length.rb:13:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/rack-1.2.1/lib/rack/handler/webrick.rb:52:in `service'
+/usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+/usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+/usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+/usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+/usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+/usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+/usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+/usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+/usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+/usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+/usr/local/lib/ruby/gems/1.8/gems/rack-1.2.1/lib/rack/handler/webrick.rb:13:in `run'
+/usr/local/lib/ruby/gems/1.8/gems/rack-1.2.1/lib/rack/server.rb:213:in `start'
+/usr/local/lib/ruby/gems/1.8/gems/railties-3.0.9/lib/rails/commands/server.rb:65:in `start'
+/usr/local/lib/ruby/gems/1.8/gems/railties-3.0.9/lib/rails/commands.rb:30
+/usr/local/lib/ruby/gems/1.8/gems/railties-3.0.9/lib/rails/commands.rb:27:in `tap'
+/usr/local/lib/ruby/gems/1.8/gems/railties-3.0.9/lib/rails/commands.rb:27
+script/rails:6:in `require'
+script/rails:6
+Rendered home/index.html.erb within layouts/application (2.2ms)
+Completed 500 Internal Server Error in 9ms
+
+ActionView::Template::Error (compile error
+/Users/mikeypearce/Sites/poolleague/app/views/layouts/application.html.erb:20: syntax error, unexpected '<', expecting kEND
+        </ul>
+         ^
+/Users/mikeypearce/Sites/poolleague/app/views/layouts/application.html.erb:21: unknown regexp options - dv
+/Users/mikeypearce/Sites/poolleague/app/views/layouts/application.html.erb:25: syntax error, unexpected '<', expecting kEND
+</body>
+ ^
+/Users/mikeypearce/Sites/poolleague/app/views/layouts/application.html.erb:26: unknown regexp options - htl
+/Users/mikeypearce/Sites/poolleague/app/views/layouts/application.html.erb:27: unterminated string meets end of file
+/Users/mikeypearce/Sites/poolleague/app/views/layouts/application.html.erb:27: syntax error, unexpected $end, expecting kEND):
+    17:             <li><%= link_to "Players", users_path %></li>
+    18:             <li><%= link_to "Games", games_path %></li>
+    19:             <li><% #= link_to "Your Account", account_path %></li>
+    20:         </ul>
+    21:     </div>
+    22:     
+    23: <%= yield %>
+  app/views/layouts/application.html.erb:27:in `compile'
+
+Rendered /Users/mikeypearce/.gem/ruby/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (79.8ms)
+Rendered /Users/mikeypearce/.gem/ruby/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (9.5ms)
+Rendered /Users/mikeypearce/.gem/ruby/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (107.7ms)
+
+
+Started GET "/" for 127.0.0.1 at Wed Aug 10 21:16:09 +0100 2011
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/application (33.5ms)
+Completed 200 OK in 41ms (Views: 40.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Wed Aug 10 21:16:34 +0100 2011
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 12ms (Views: 11.1ms | ActiveRecord: 0.0ms)
