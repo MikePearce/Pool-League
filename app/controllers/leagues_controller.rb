@@ -83,6 +83,10 @@ class LeaguesController < ApplicationController
     end
   end
   
+  def join
+    
+  end
+  
   
   def start
     @league = League.find(params[:id])

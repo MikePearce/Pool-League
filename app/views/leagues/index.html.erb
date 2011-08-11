@@ -15,7 +15,15 @@
     <td class="started_<%= league.id %>"><%= league.started %></td>
     <td><%= league.ended %></td>
     <td><%= league.winner %></td>
-    <td><%= (!league.open ? (link_to 'Start League', start_league_path(league), 
+    <% #if the league has users, then show the start league link%>
+    <td>
+        <%= (!league.open ? (link_to 'Join League', join_league_path(league), 
+                                :confirm => "Are you sure?", 
+                                :remote => true, 
+                                'data-type' => 'json', 
+                                :class => 'join_league') : '') %> | 
+
+        <%= (!league.open ? (link_to 'Start League', start_league_path(league), 
                                 :confirm => "Are you sure?", 
                                 :remote => true, 
                                 'data-type' => 'json', 

@@ -1,10 +1,11 @@
 Poolleague::Application.routes.draw do
 
-  resources :users
+  resources :players
   resources :games
   resource :account
   resources :leagues do
     get :start, :on => :member
+    get :join, :on => :member
   end
 
   get "home/index"
