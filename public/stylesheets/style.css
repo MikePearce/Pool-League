@@ -1,0 +1,65 @@
+body {
+    font-family: 'Varela Round', sans-serif;
+    font-size: 12px;
+}
+#container {
+    width: 960px;
+    padding: 10px;
+    margin: auto;
+}
+#header {
+    background: #fff url(/images/8ball.png) 0 0 no-repeat;
+    padding-left: 150px;
+    padding-top: 50px;
+    height: 80px;
+}
+#header h1, #header h2 {
+    margin: 0;
+    padding: 0;
+}
+#header h1 {
+    margin-bottom: 10px;
+}
+#navigation ul {
+    margin: 0;
+    padding: 0;
+}
+#navigation ul li {
+    display: inline;
+    margin: 0;
+    padding: 0;
+}
+#content {
+    padding 10px;
+}
+/** Tables **/
+#content table {
+    width: 100%;
+    border-collapse: collapse;
+}
+#content table th {
+	padding: 8px;
+	font-weight: normal;
+	font-size: 13px;
+	color: #039;
+	background: #b9c9fe;
+	margin: 0;
+	text-align: left;
+}
+#content table th.first {
+    -moz-border-top-left-radius: 15px;
+    border-top-left-radius: 15px;
+}
+#content table th.last {
+    -moz-border-top-right-radius: 15px;
+    border-top-right-radius: 15px;
+}
+#content table tr td {
+	padding: 8px;
+	background: #e8edff;
+	border-top: 1px solid #fff;
+	color: #669;
+}
+#content table tr:nth-child(2n) td {
+    background-color: #fff;
+}

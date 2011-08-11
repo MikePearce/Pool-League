@@ -1,10 +1,11 @@
 class CreateLeagues < ActiveRecord::Migration
   def self.up
     create_table :leagues do |t|
-      t.string :name
+      t.string :names
       t.boolean :open
-      t.date :started
-      t.date :finished
+      t.datetime :started
+      t.datetime :ended
+      t.integer :winner
 
       t.timestamps
     end

@@ -1,0 +1,29 @@
+<table>
+  <tr>
+    <th class="first">Names</th>
+    <th>Open</th>
+    <th>Started</th>
+    <th>Ended</th>
+    <th>Winner</th>
+    <th class="last"></th>
+  </tr>
+
+<% @leagues.each do |league| %>
+  <tr>
+    <td><%= link_to league.names, league %></td>
+    <td class="open_<%= league.id %>"><%= (league.open ? 'Yes' : 'No') %></td>
+    <td class="started_<%= league.id %>"><%= league.started %></td>
+    <td><%= league.ended %></td>
+    <td><%= league.winner %></td>
+    <td><%= (!league.open ? (link_to 'Start League', start_league_path(league), 
+                                :confirm => "Are you sure?", 
+                                :remote => true, 
+                                'data-type' => 'json', 
+                                :class => 'start_league') : '') %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New League', new_league_path %>

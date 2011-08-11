@@ -1,13 +1,15 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 
 one:
-  name: MyString
+  names: MyString
   open: false
-  started: 2011-08-10
-  finished: 2011-08-10
+  started: 2011-08-11 10:23:19
+  ended: 2011-08-11 10:23:19
+  winner: 1
 
 two:
-  name: MyString
+  names: MyString
   open: false
-  started: 2011-08-10
-  finished: 2011-08-10
+  started: 2011-08-11 10:23:19
+  ended: 2011-08-11 10:23:19
+  winner: 1

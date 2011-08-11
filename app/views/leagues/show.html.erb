@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Names:</b>
+  <%= @league.names %>
+</p>
+
+<p>
+  <b>Open:</b>
+  <%= @league.open %>
+</p>
+
+<p>
+  <b>Started:</b>
+  <%= @league.started %>
+</p>
+
+<p>
+  <b>Ended:</b>
+  <%= @league.ended %>
+</p>
+
+<p>
+  <b>Winner:</b>
+  <%= @league.winner %>
+</p>
+
+
+<%= link_to 'Edit', edit_league_path(@league) %> |
+<%= link_to 'Back', leagues_path %>
