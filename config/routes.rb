@@ -5,7 +5,7 @@ Poolleague::Application.routes.draw do
 
   resources :users
   resources :games
-  resources :account
+  resource :account
   resources :leagues
 
   get "home/index"
